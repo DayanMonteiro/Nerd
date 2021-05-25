@@ -1,6 +1,7 @@
 .formulario{
     width: 400px;
     padding: 30px;
+    margin: 0;
     border:1px solid #ccc;
 }
 .formulario p{
@@ -18,7 +19,25 @@
     display: block;
     width: 100%;
 }
+
+.radiobox input {
+    padding: 5px;
+}
 .radiobox label{
     width: auto;
     display: inline-block;
+    padding: 5px;
 }
+
+.position {
+    display: flex;
+    align-items: center;
+}
+
+img {
+    margin-left: 300px;
+}
+
+
+
+
