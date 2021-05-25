@@ -14,6 +14,7 @@ import { InterceptorModule } from './interceptor/interceptor.module';
 import { OfertasListaComponent } from './components/ofertas/ofertas-lista/ofertas-lista.component';
 import { HomeComponent } from './pages/home/home.component';
 import { CadastroComponent } from './pages/cadastro/cadastro.component';
+import { FormularioComponent } from './components/formulario/formulario.component';
 
 
 @NgModule({
@@ -25,7 +26,8 @@ import { CadastroComponent } from './pages/cadastro/cadastro.component';
     OfertasListaComponent,
     FooterComponent,
     HomeComponent,
-    CadastroComponent
+    CadastroComponent,
+    FormularioComponent
   ],
   
   imports: [
