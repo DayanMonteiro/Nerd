@@ -30,6 +30,13 @@
     width: 100%;
     display: flex;
   }
+
+.close {
+  background-color: #d63031;
+  border-radius: 3px;
+  color: white;
+}
+
   h1 {
     text-align: center;
     color: #d63031;
@@ -43,6 +50,12 @@
     width: 250px;
   }
   
+.description {
+  display: flex;
+  text-align: justify;
+  width: 100%;
+  padding: 5px;
+  }
   /*
   .container__heroes {
     display: flex;
