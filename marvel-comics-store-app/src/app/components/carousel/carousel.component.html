@@ -1,0 +1,17 @@
+<ngb-carousel *ngIf="images" class="carousel">
+    <ng-template ngbSlide>
+      <div class="picsum-img-wrapper">
+        <img [src]="images[0]" alt="herois marvel">
+      </div>
+    </ng-template>
+    <ng-template ngbSlide>
+      <div class="picsum-img-wrapper">
+        <img [src]="images[1]" alt="herois marvel">
+      </div>
+    </ng-template>
+    <ng-template ngbSlide>
+      <div class="picsum-img-wrapper">
+        <img [src]="images[2]" alt="herois marvel">
+      </div>
+    </ng-template>
+  </ngb-carousel>

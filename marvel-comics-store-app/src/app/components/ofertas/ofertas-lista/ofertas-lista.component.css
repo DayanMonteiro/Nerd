@@ -1,0 +1,37 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 1200px;
+}
+
+.title_ofertas {
+    background-color:#ffd32a ;
+}
+
+.row {
+    flex-direction: row;
+}
+
+.ofertas {
+    width: 285px;
+}
+
+h1 {
+    text-align: center;
+}
+
+p {
+    text-align: justify;
+}
+
+#video {
+   display: flex;
+   margin: 0 auto;
+}
+
+button {
+    display: flex;
+    align-items: center;
+    margin: 0 auto;
+}

@@ -1,0 +1,82 @@
+<ng-template #content let-c="close" let-d="dismiss">
+  <div class="modal-header">
+    <h4 class="modal-title" id="modal-basic-title">{{ heroi.titulo }}</h4>
+    <button type="button" class="close" aria-label="Close" (click)="d('Cross click')">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div class="modal-body">
+    <img [src]="heroi.imagem + '/portrait_xlarge.jpg'" alt="">
+    <p>{{ heroi.descricao }}</p>
+  </div>
+  <div class="modal-footer">
+    <button type="button" class="btn btn-outline-dark" (click)="c('Save click')">Comprar</button>
+  </div>
+</ng-template>
+
+<ng-template #compras let-c="close" let-d="dismiss">
+  <div class="modal-header">
+    <h2 class="modal-title" id="modal-basic-title">Aumente sua coleção!</h2>
+    <button type="button" class="close" aria-label="Close" (click)="d('Cross click')">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div class="modal-body">
+    <form >
+      <div>
+        <h1 class="checkout-title">
+          Preço R$
+          <span>{{ heroi.preco }}</span>
+        </h1>
+      </div>
+      <p>
+        <input type="text" class="checkout-input checkout-name" placeholder="Seu nome">
+        <input type="text" class="checkout-input checkout-exp" placeholder="MM">
+        <input type="text" class="checkout-input checkout-exp" placeholder="YY">
+      </p>
+      <p>
+        <input type="text" class="checkout-input checkout-card" placeholder="1111 1111 1111 1111">
+        <input type="text" class="checkout-input checkout-cvc" placeholder="CVC">
+      </p>
+      <p>
+        <input type="submit" value="Enviar" class="checkout-btn">
+      </p>
+    </form>
+          Digite seus dados para finalizar compra!
+  </div>
+
+  <div class="botoes-de__compra">
+    <button type="button" class="btn btn-dark">Adicionaro ao carrinho</button>
+    <button type="button" class="btn btn-warning">Inserir cupom de desconto</button>
+  </div>
+</ng-template>
+
+
+<section class="container">
+    <h1 class="divisor">Catálogo Geek</h1>
+  
+    <div class="container__heroes">
+      <ul *ngFor="let c of herois">
+          <li>
+            <h3> {{c.title}} </h3>
+            <img [src]="c.thumbnail.path + '/portrait_xlarge.jpg'" />
+            <div class="price">R$ 
+                {{c.prices[0].price}}               
+            </div>
+            <div class="botoes">
+              <button 
+                type="button" 
+                class="btn btn-warning" 
+                (click)="open(content, c)"
+                >Detalhes
+              </button>  
+              <button 
+                type="button" 
+                class="btn btn-dark"
+                (click)="open(compras, c)"
+              >Comprar</button>            
+            </div>
+          </li>
+      </ul>
+    </div>
+  </section>

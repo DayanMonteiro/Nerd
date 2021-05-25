@@ -1,0 +1,101 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+    background-image: url("../../../assets/img/fundo.png"); 
+    background-size: cover; 
+    margin-top: 12px;
+  }
+  
+  .divisor {
+    background: #2d3436;
+    width: 100%;
+    height: 55px;
+    margin-top:  10px;
+  }
+  
+  .row {
+    flex-direction: row;
+  }
+  
+  li {
+    display: flex; 
+    padding: 10px;
+    flex-direction: column;
+
+  }
+
+  .botoes{
+    width: 100%;
+    display: flex;
+  }
+  h1 {
+    text-align: center;
+    color: #d63031;
+  }
+  
+  h3 {
+    list-style: none;
+  }
+  
+  p {
+    width: 250px;
+  }
+  
+  /*
+  .container__heroes {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+  }
+  */
+
+  .price {
+    display: flex;
+    margin-top: 5px;
+    background-color: #b2bec3;
+    width: 80px;
+    align-items: center ;
+    align-self: center;
+   
+  }
+
+  .container__heroes {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  column-gap: 20px;
+}
+
+svg {
+margin-right: 3px;
+}
+
+.btn {
+    margin: 10px;
+}
+
+input {
+  margin: 3px;
+}
+
+.checkout-title {
+  color: #2d3436;
+}
+.botoes-de__compra {
+  display: flex;
+  justify-content: space-between;
+  margin: 25px;
+}
+
+.modal-body {
+  display: flex;
+  flex-direction: column;
+}
+
+.modal-body img {
+  width: 30%;
+  align-items: center;
+  align-self: center;
+  padding-bottom: 5px;
+}
