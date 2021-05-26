@@ -1,6 +1,9 @@
+
 import { CUSTOM_ELEMENTS_SCHEMA, NgModule } from '@angular/core';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { BrowserModule } from '@angular/platform-browser';
+import { Routes, RouterModule } from '@angular/router';
+
 
 import { AppComponent } from './app.component';
 import { CarouselComponent } from './components/carousel/carousel.component';
@@ -15,6 +18,14 @@ import { OfertasListaComponent } from './components/ofertas/ofertas-lista/oferta
 import { HomeComponent } from './pages/home/home.component';
 import { CadastroComponent } from './pages/cadastro/cadastro.component';
 import { FormularioComponent } from './components/formulario/formulario.component';
+import { LazyloadingModule } from './modules/lazyloading/lazyloading.module';
+
+/*
+const routes: Routes = [{ path: 'rotas', loadChildren: () => import('./pages/rotas/rotas.module').then(m => m.RotasModule) }
+
+]; */
+
+const routes: Routes = [];
 
 
 @NgModule({
@@ -27,7 +38,8 @@ import { FormularioComponent } from './components/formulario/formulario.componen
     FooterComponent,
     HomeComponent,
     CadastroComponent,
-    FormularioComponent
+    FormularioComponent,
+    
   ],
   
   imports: [
@@ -35,7 +47,9 @@ import { FormularioComponent } from './components/formulario/formulario.componen
     NgbModule,
     HttpClientModule,
     routing,
-    InterceptorModule
+    InterceptorModule,
+    RouterModule.forRoot(routes),
+    LazyloadingModule,
   ],
   providers: [ HeroisService ],
   bootstrap: [AppComponent],
