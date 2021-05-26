@@ -6,37 +6,40 @@ import { Routes, RouterModule } from '@angular/router';
 
 
 import { AppComponent } from './app.component';
-import { CarouselComponent } from './components/carousel/carousel.component';
-import { NavbarComponent } from './components/template/navbar/navbar.component';
-import { SectionCardComponent } from './components/section-card/section-card.component';
+ import { CarouselComponent } from './components/carousel/carousel.component';
+ import { NavbarComponent } from './components/template/navbar/navbar.component';
+// import { SectionCardComponent } from './components/section-card/section-card.component';
 import { FooterComponent } from './components/template/footer/footer.component';
 import { HeroisService } from './services/herois/herois.service';
 import { HttpClientModule,  } from '@angular/common/http';
 import { routing } from './app.routing';
 import { InterceptorModule } from './interceptor/interceptor.module';
-import { OfertasListaComponent } from './components/ofertas/ofertas-lista/ofertas-lista.component';
-import { HomeComponent } from './pages/home/home.component';
+// import { OfertasListaComponent } from './components/ofertas/ofertas-lista/ofertas-lista.component';
+// import { HomeComponent } from './pages/home/home.component';
 import { CadastroComponent } from './pages/cadastro/cadastro.component';
 import { FormularioComponent } from './components/formulario/formulario.component';
 import { LazyloadingModule } from './modules/lazyloading/lazyloading.module';
 
+/*    */
+const routes: Routes = [
+  { path: 'rotas', loadChildren: () => import('./modules/lazyloading/lazyloading.module').then(m => m.LazyloadingModule) 
+}
+]
+
 /*
-const routes: Routes = [{ path: 'rotas', loadChildren: () => import('./pages/rotas/rotas.module').then(m => m.RotasModule) }
-
-]; */
-
-const routes: Routes = [];
+const routes: Routes = [ ]
+*/
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    CarouselComponent,
+   CarouselComponent,
     NavbarComponent,
-    SectionCardComponent,
-    OfertasListaComponent,
-    FooterComponent,
-    HomeComponent,
+  //  SectionCardComponent,
+  // OfertasListaComponent,
+   FooterComponent,
+   // HomeComponent,
     CadastroComponent,
     FormularioComponent,
     
