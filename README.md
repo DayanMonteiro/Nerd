@@ -61,7 +61,7 @@ npm install bootstrap
 
 ### 📦 Desenvolvimento
 
-
+![ex:-das-paginas](https://github.com/DayanMonteiro/Nerd/blob/master/Group%206.png)
 
 #### 🛠️ Construído com
 
