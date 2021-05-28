@@ -10,7 +10,7 @@ import { AppComponent } from './app.component';
  import { NavbarComponent } from './components/template/navbar/navbar.component';
 // import { SectionCardComponent } from './components/section-card/section-card.component';
 import { FooterComponent } from './components/template/footer/footer.component';
- import { HeroisService } from './services/herois/herois.service';
+import { HeroisService } from './services/herois/herois.service';
 import { HttpClientModule,  } from '@angular/common/http';
 import { routing } from './app.routing';
 import { InterceptorModule } from './interceptor/interceptor.module';
